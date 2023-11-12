@@ -1,0 +1,10 @@
+run = "hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --baseURL https://blog-dev-seruvious.repl.co"
+entrypoint = "content/posts/hello.md"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+build = ["hugo"]
+deploymentTarget = "static"
+publicDir = "public"
