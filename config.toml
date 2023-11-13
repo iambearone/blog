@@ -8,13 +8,12 @@ enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
-googleAnalytics = "UA-123-45"
 pygmentsUseClasses = true
 
 [params]
-env = "development"
-title = "ExampleSite"
-description = "ExampleSite description"
+env = "production"
+title = "iambear.one"
+description = "Collecting Memories"
 keywords = [ "Blog", "Portfolio", "PaperMod" ]
 author = "bear"
 images = [ "<link or path of image for opengraph, twitter-cards>" ]
@@ -22,12 +21,12 @@ DateFormat = "January 2, 2006"
 defaultTheme = "auto"
 disableThemeToggle = true
 ShowReadingTime = true
-ShowShareButtons = true
+ShowShareButtons = false
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
-ShowCodeCopyButtons = false
+ShowCodeCopyButtons = true
 ShowWordCount = true
-ShowRssButtonInSectionTermList = true
+ShowRssButtonInSectionTermList = false
 UseHugoToc = true
 disableSpecial1stPost = false
 disableScrollToTop = false
@@ -51,33 +50,12 @@ tocopen = false
 
   [params.homeInfoParams]
   Title = "Hi there 👋"
-  Content = "Welcome to my blog"
-
-  [[params.socialIcons]]
-  name = "twitter"
-  url = "https://twitter.com/"
-
-  [[params.socialIcons]]
-  name = "stackoverflow"
-  url = "https://stackoverflow.com"
-
-  [[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/"
-
-  [[params.socialIcons]]
-  name = "linkedin"
-  url = "https://linkedin.com/"
+  Content = "Here's my stuff"
 
   [params.cover]
   hidden = true
   hiddenInList = true
   hiddenInSingle = true
-
-  [params.editPost]
-  URL = "https://github.com/<path_to_repo>/content"
-  Text = "Suggest Changes"
-  appendFilePath = true
 
   [params.fuseOpts]
   isCaseSensitive = false
@@ -90,22 +68,66 @@ tocopen = false
   keys = [ "title", "permalink", "summary", "content" ]
 
 [[menu.main]]
-identifier = "categories"
-name = "categories"
-url = "/categories/"
+identifier = "Posts"
+name = "Posts"
+url = "/categories/other"
 weight = 10
 
 [[menu.main]]
-identifier = "tags"
-name = "tags"
-url = "/tags/"
+identifier = "Portfolio"
+name = "Portfolio"
+url = "/categories/portfolio"
 weight = 20
 
 [[menu.main]]
-identifier = "example"
-name = "example.org"
-url = "https://example.org"
+identifier = "Book Reviews"
+name = "Book Reviews"
+url = "/categories/book-reviews"
+weight = 25
+
+[[menu.main]]
+identifier = "Archive"
+name = "Archive"
+url = "/archive/"
 weight = 30
+
+[[menu.main]]
+identifier = "LinkedIn"
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/iambearone/"
+weight = 40
+
+[[menu.main]]
+identifier = "example"
+name = "Reforge Artifacts"
+url = "https://www.reforge.com/profiles/bjorn-seaton"
+weight = 45
 
 [markup.highlight]
 noClasses = false
+
+[params.profileMode]
+enabled = true
+title = "Hi there 👋"
+subtitle = "Here's my stuff"
+
+  [[params.profileMode.buttons]]
+  name = "Posts"
+  url = "/categories/other"
+
+  [[params.profileMode.buttons]]
+  name = "Portfolio"
+  url = "/categories/portfolio"
+
+  [[params.profileMode.buttons]]
+  name = "Book Reviews"
+  url = "/categories/book-reviews"
+  
+  [[params.profileMode.buttons]]
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/iambearone/"
+
+  [[params.profileMode.buttons]]
+  name = "Reforge Artifacts"
+  url = "https://www.reforge.com/profiles/bjorn-seaton"
+
